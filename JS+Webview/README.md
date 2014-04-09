@@ -7,3 +7,5 @@ webview通过loadurl加载一个html页面，然后html中嵌有javascript的处
 二、先从html去js文件中调用对应的js方法，然后在js文件中再调用android java中的处理接口，
     如javascript:window.myjs.chooseDate(dateChoose.value,dateChoose.id);其中myjs是在java中处理js方法的对象,是通过
     addJavascriptInterface(new MyJavaScriptInterface(), "myjs")添加到webview中的。
+    
+  其中，android.webkit.JavascriptInterface是API 17及以后版本才有的接口，因此工程依赖的api至少为17.
